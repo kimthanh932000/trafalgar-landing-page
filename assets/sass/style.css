@@ -38,17 +38,21 @@ body {
 input, textarea, button {
   font-family: inherit; }
 
-.c-btn {
+.c-btn, .c-btn--blue, .c-btn--transparent {
   width: 20rem;
   height: 5.6rem;
-  border-radius: 5rem;
-  background-color: #458FF6;
-  color: #fff;
+  border-radius: 5.5rem;
   font-weight: bold;
   font-size: 1.8rem;
-  border: none;
+  border: 1.4px solid #458FF6;
   outline: none;
   cursor: pointer; }
+  .c-btn--blue {
+    background-color: #458FF6;
+    color: #fff; }
+  .c-btn--transparent {
+    background-color: transparent;
+    color: #458FF6; }
 
 .c-dot {
   position: absolute;
@@ -120,6 +124,9 @@ input, textarea, button {
       margin-bottom: 4.5rem; }
   .section-intro .illus-box {
     margin-left: 10.9rem; }
+  .section-intro .illus-img {
+    width: 69.3rem;
+    height: 59.8rem; }
   .section-intro .dot-square {
     position: absolute;
     left: 0;

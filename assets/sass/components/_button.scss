@@ -1,12 +1,22 @@
 .c-btn {
   width: 20rem;
   height: 5.6rem;
-  border-radius: 5rem;
-  background-color: $color-blue;
-  color: #fff;
+  border-radius: 5.5rem;
   font-weight: bold;
   font-size: 1.8rem;
-  border: none;
+  border: 1.4px solid $color-blue;
   outline: none;
   cursor: pointer;
+
+  &--blue {
+    @extend .c-btn;
+    background-color: $color-blue;
+    color: #fff;
+  }
+
+  &--transparent {
+    @extend .c-btn;
+    background-color: transparent;
+    color: $color-blue;
+  }
 }
