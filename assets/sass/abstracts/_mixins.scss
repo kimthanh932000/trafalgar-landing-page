@@ -12,3 +12,21 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin underline($position, $space-between) {
+  &:after {
+    content: "";
+    display: block;
+    background-color: #000;
+    width: 5.6rem;
+    height: .2rem;
+
+    @if $position == center {
+      margin: $space-between auto;
+    } @else if $position == left {
+      margin: $space-between 0;
+    } @else {
+      margin: $space-between 0 auto;
+    }
+  }
+}
