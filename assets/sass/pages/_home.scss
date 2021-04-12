@@ -84,7 +84,7 @@
         font-size: 1.6rem;
         font-weight: 300;
         color: $color-grey;
-        line-height: 2.8rem;
+        line-height: get-line-height(1.6, 2.8)
       }
     }
   }

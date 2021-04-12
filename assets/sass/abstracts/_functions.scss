@@ -1,0 +1,7 @@
+@function get-line-height($font-size, $line-height:1.6) {
+  @if ($line-height == 1.6) {
+    @return 1.6;
+  } @else {
+      @return $line-height / $font-size;
+  }
+}
