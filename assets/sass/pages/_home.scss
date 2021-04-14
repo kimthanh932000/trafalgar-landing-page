@@ -3,7 +3,31 @@
   justify-content: center;
   margin-top: 8.4rem;
   position: relative;
-  background: url("../img/dot_square.svg") no-repeat left top;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 13.2rem;
+    height: 11.5rem;
+    background: url("../img/dot_square.svg") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 5.2rem;
+    height: 2rem;
+    position: absolute;
+    background-color: #C4C4C4;
+    bottom: 1rem;
+    left: 0;
+    transform: rotate(13.12deg);
+    z-index: -1;
+  }
 
   .text-box {
     width: 44.5rem;
@@ -22,29 +46,40 @@
 
   .illus-box {
     margin-left: 10.9rem;
+    width: 69.3rem;
+    height: 59.8rem;
   }
 
   .illus-img {
-    width: 69.3rem;
-    height: 59.8rem;
+    max-width: 100%;
   }
 }
 
 .section-services {
   margin-top: 19rem;
-  background: url("../img/bg_element.svg") no-repeat left 5rem top,
-  url("../img/dot_square.svg") no-repeat right 13rem bottom 42rem;
+  background: url("../img/bg_element.svg") no-repeat left 5rem top;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 13.2rem;
+    height: 11.5rem;
+    background: url("../img/dot_square.svg") no-repeat;
+    position: absolute;
+    top: 52%;
+    right: 8%;
+    z-index: -1;
+  }
 
   .text-box {
     width: 95.2rem;
     margin: 0 auto;
 
     .heading {
-      text-align: center;
 
       &-primary {
         @include underline(center, 2.5rem);
@@ -98,11 +133,26 @@
   margin-top: 22rem;
   display: flex;
   justify-content: center;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 13.2rem;
+    height: 11.5rem;
+    background: url("../img/dot_square.svg") no-repeat;
+    position: absolute;
+    top: 110%;
+    right: -6%;
+    z-index: -1;
+  }
 
   .illus-box {
+    width: 65rem;
+    height: 47.7rem;
+
     .illus-img {
-      width: 65rem;
-      height: 47.7rem;
+      max-width: 100%;
     }
   }
 
@@ -134,9 +184,11 @@
   flex-direction: row-reverse;
 
   .illus-box {
+    width: 66.5rem;
+    height: 43.4rem;
+
     .illus-img {
-      width: 66.5rem;
-      height: 43.4rem;
+      max-width: 100%;
     }
   }
 
@@ -160,6 +212,83 @@
 
       .c-icon {
         margin-left: .8rem;
+      }
+    }
+  }
+}
+
+.section-testimonials {
+
+  .heading-primary {
+    @include underline(center, 2.5rem, #fff)
+  }
+  .testimonial-wrap {
+    width: 112rem;
+    height: 42.5rem;
+    margin: 26.6rem auto 0;
+    padding: 6.4rem 11.8rem 8.2rem;
+    border-radius: 2.4rem;
+    background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 13.2rem;
+      height: 11.5rem;
+      background: url("../img/dot_square_white.svg") no-repeat;
+      position: absolute;
+      top: 1.3rem;
+      right: -5rem;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 13.2rem;
+      height: 11.5rem;
+      background: url("../img/dot_square.svg") no-repeat;
+      position: absolute;
+      bottom: 4rem;
+      left: -5rem;
+      z-index: -1;
+    }
+
+    .testimonial {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 6rem;
+
+      &-left {
+        width: 35.4rem;
+        display: flex;
+        align-items: center;
+
+        .testimonial-info {
+          margin-left: 2.9rem;
+
+          &__name {
+            font-size: 2.2rem;
+            font-weight: bold;
+            line-height: get-line-height(2.2, 4.8);
+          }
+          &__title {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.85);
+          }
+        }
+      }
+      &-right {
+        width: 42rem;
+        margin-left: 5rem;
+
+        .testimonial__quote {
+          font-size: 1.9rem;
+          line-height: get-line-height(1.9, 3);
+          color: rgba(#fff, .9);
+        }
       }
     }
   }

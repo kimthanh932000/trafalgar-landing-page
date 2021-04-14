@@ -4,6 +4,11 @@
 
   &__logo-box {
     cursor: pointer;
+    width: 16rem;
+    height: 4.1rem;
+  }
+  &__logo {
+    max-width: 100%;
   }
 
   &__nav {

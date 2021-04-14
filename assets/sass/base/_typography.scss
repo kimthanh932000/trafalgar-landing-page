@@ -1,13 +1,14 @@
 body {
-  font-weight: 400;
   color: $color-black;
   font-family: $base-font, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .heading {
 
   &-primary {
-    color: #000;
+    //color: #000;
     font-weight: bold;
   }
   &-primary--big {

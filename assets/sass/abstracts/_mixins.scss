@@ -13,13 +13,14 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin underline($position, $space-between) {
+@mixin underline($position, $space-between, $bg-color: #000) {
   &:after {
     content: "";
     display: block;
-    background-color: #000;
+    background-color: $bg-color;
     width: 5.6rem;
     height: .2rem;
+    border-radius: .6rem;
 
     @if $position == center {
       margin: $space-between auto;
