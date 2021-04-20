@@ -31,3 +31,17 @@
     }
   }
 }
+
+@mixin dots($left, $top, $right, $bottom, $z-index) {
+  &:before {
+    content: '';
+    display: block;
+    width: 13.2rem;
+    height: 11.5rem;
+    background: url("../img/dot_square.svg") no-repeat;
+    position: absolute;
+    //top: 52%;
+    //right: 8%;
+    //z-index: -1;
+  }
+}
