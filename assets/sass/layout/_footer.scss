@@ -1,0 +1,61 @@
+.footer {
+  background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+  height: 43.2rem;
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 19rem;
+  margin-top: 12.2rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  //overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 13.2rem;
+    height: 11.5rem;
+    background: url("../img/dot_square.svg") no-repeat;
+    position: absolute;
+    top: -7rem;
+    right: 8rem;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 13.2rem;
+    height: 11.5rem;
+    background: url("../img/dot_square_white.svg") no-repeat;
+    position: absolute;
+    bottom: -1.8rem;
+    left: -1.8rem;
+  }
+  .text-box {
+    width: 39.1rem;
+    line-height: get-line-height(1.8, 2.8);
+
+    p:first-child {
+      margin-top: 2.2rem;
+      margin-bottom: 3.1rem;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  .menu {
+
+    &__header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    &__item {
+      line-height: get-line-height(1.8, 3.8);
+      //padding: 1rem 0;
+    }
+  }
+}
