@@ -145,6 +145,10 @@
     top: 110%;
     right: -6%;
     z-index: -1;
+
+    @include respond(big-desktop) {
+      
+    }
   }
 
   .illus-box {
