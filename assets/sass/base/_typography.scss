@@ -13,11 +13,19 @@ body {
   }
   &-primary--big {
     font-size: 4.8rem;
-    line-height: get-line-height(4.8, 5.6)
+    line-height: get-line-height(4.8, 5.6);
+
+    @include respond(tab) {
+      font-size: 4rem;
+    }
   }
   &-primary--medium {
     font-size: 3.6rem;
-    line-height: get-line-height(3.6, 5.6)
+    line-height: get-line-height(3.6, 5.6);
+
+    @include respond(tab) {
+      font-size: 3rem;
+    }
   }
   &-primary--small {
     font-size: 2.4rem;
@@ -30,6 +38,10 @@ body {
   }
   &-sub--big {
     font-size: 2.1rem;
+
+    // @include respond(tab) {
+    //   font-size: 1.9rem;
+    // }
   }
   &-sub--medium {
     font-size: 1.8rem;
