@@ -58,6 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 5rem;
 
   &:before {
@@ -85,6 +86,7 @@
     padding-top: 6.15rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .service-item {
       width: 35rem;
@@ -94,6 +96,18 @@
       background-color: #fff;
       padding: 5.4rem .5rem 4.659rem 3.9rem;
       box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+
+      @include respond(tab) {
+        width: 45%;
+        padding: 5.4rem;
+        text-align: center;
+      }
+
+      @include respond(phone-land) {
+        width: 65%;
+        padding: 5.4rem;
+        text-align: center;
+      }
 
       &__img {
         width: 9.2rem;
@@ -112,7 +126,12 @@
         font-size: 1.6rem;
         font-weight: 300;
         color: $color-grey;
-        line-height: get-line-height(1.6, 2.8)
+        line-height: get-line-height(1.6, 2.8);
+
+        @include respond(tab) {
+          width: 30.6rem;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -211,6 +230,10 @@
 .section-testimonials {
   padding: 0 5rem;
 
+  @include respond(phone-land) {
+    padding: 0;
+  }
+
   .heading-primary {
     @include underline(center, 2.5rem, #fff)
   }
@@ -224,7 +247,16 @@
     position: relative;
 
     @include respond(desktop) {
-      width: 107rem;
+      width: 105rem;
+    }
+
+    @include respond(tab) {
+      width: 100rem;
+    }
+
+    @include respond(phone-land) {
+      width: 100%;
+      height: 65rem;
     }
 
     &:before {
@@ -250,13 +282,22 @@
       align-items: center;
       margin-top: 6rem;
 
+      @include respond(phone-land) {
+        flex-direction: column;
+      }
+
       &-left {
         width: 35.4rem;
         display: flex;
         align-items: center;
 
         @include respond(desktop) {
-          width: 40rem;
+          width: 50rem;
+        }
+
+        @include respond(phone-land) {
+          justify-content: center;
+          flex-direction: column;
         }
 
         .testimonial-info {
@@ -266,6 +307,10 @@
             font-size: 2.2rem;
             font-weight: bold;
             line-height: get-line-height(2.2, 4.8);
+
+            @include respond(tab) {
+              font-size: 2rem;
+            }
           }
           &__title {
             font-size: 1.8rem;
@@ -276,6 +321,12 @@
       &-right {
         width: 42rem;
         margin-left: 5rem;
+
+        @include respond(phone-land) {
+          width: 40rem;
+          margin-left: 0;
+          margin-top: 3rem;
+        }
 
         .testimonial__quote {
           font-size: 1.9rem;
@@ -295,7 +346,7 @@
 
   &:before {
     @include dots("../img/dot_square.svg", -1);
-    
+
     position: absolute;
     top: 9.4rem;
     left:28.7rem;
@@ -309,6 +360,10 @@
     justify-content: center;
     margin-top: 5.4rem;
 
+    @include respond(tab) {
+        flex-direction: column;
+      }
+
     .article {
       width: 35rem;
       height: 51.2rem;
@@ -317,13 +372,30 @@
       border-radius: 2rem;
       background: #fff;
 
+      @include respond(tab) {
+        width: 100%;
+        margin-top: 3rem;
+        display: flex;
+        height: 100%;
+      }
+
       .content-wrap {
         padding: 2.4rem 6.6rem 0 3.3rem;
+
+        @include respond(tab) {
+          padding: 2.4rem;
+        }
       }
 
       &__img {
         border-radius: 2rem 2rem 0 0;
         max-width: 100%;
+        min-height: 100%;
+
+        @include respond(tab) {
+          border-radius: 2rem 0 0 2rem;
+
+        }
       }
       &__title {
         font-size: 2.1rem;
